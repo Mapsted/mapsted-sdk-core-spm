@@ -1,0 +1,4 @@
+framework module MapstedCore {
+  header "MapstedCore-Swift.h"
+  requires objc
+}
