@@ -1,0 +1,1 @@
+# mapsted-sdk-core-spm
