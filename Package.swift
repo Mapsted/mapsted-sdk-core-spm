@@ -11,8 +11,6 @@ let package = Package(
             targets: ["MapstedCore"])
     ],
     dependencies: [
-            // Here we define our package's external dependencies
-            // and from where they can be fetched:
             .package(
                 name: "ZipArchive",
                 url: "https://github.com/ZipArchive/ZipArchive.git",
