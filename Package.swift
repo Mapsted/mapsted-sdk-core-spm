@@ -8,7 +8,7 @@ let package = Package(
     products: [
         .library(
             name: "MapstedCore",
-            targets: ["MapstedCore"])
+            targets: ["MapstedCoreWrapper"])
     ],
     dependencies: [
             .package(
@@ -30,6 +30,14 @@ let package = Package(
             )
     ],
     targets: [
+        .target(name: "MapstedCoreWrapper",
+                dependencies: [
+                    .target(name: "MapstedCore"),
+                    .product(name: "ZipArchive", package: "ZipArchive"),
+                    .product(name: "CocoaMQTT", package: "CocoaMQTT"),
+                    .product(name: "CocoaAsyncSocket", package: "CocoaAsyncSocket")
+                ]
+        ),
         .binaryTarget(
             name: "MapstedCore",
             path: "MapstedCore.xcframework"
